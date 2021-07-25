@@ -1,8 +1,25 @@
-{% extends "layout.html" %}
-{% block body%}
+{% extends "layout.html" %} {% block body%}
 
-<div id="container">
-<h2>Main view</h2>
+<div class="father">
+  <div id="container" class="animate__animated animate__bounceInDown animate__delay-1s">
+    <h2>Principal View</h2>
+    <div id="main">
+      <button id="normal" type="button">Clientes</button>
+      <div id="especial">
+        <button type="button" id="especial">Especial</button>
+        <select name="vendedor" id="vendedor">
+          <option>Arturo</option>
+          <option>Carlos</option>
+          <option>Diego</option>
+        </select>
+
+      </div>
+
+      <button id="preferencial" type="button">Preferencial</button>
+
+
+    </div>
+  </div>
 </div>
 
 {% endblock %}

@@ -9,8 +9,36 @@ body {
   background-attachment: fixed;
 }
 
-#container {
+.father {
+  margin-top: 45px;
+}
+.father #container {
+  margin-top: 80px;
   background: #d6d4d4;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  border: 2px solid blue;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.father #container h2 {
+  margin-top: 40px;
+  font-size: 65px;
+  color: blue;
+  text-decoration: underline;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.father #container #main {
+  margin-top: 35px;
+  background-color: oldlace;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

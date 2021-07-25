@@ -9,8 +9,42 @@ body {
   background-attachment: fixed;
 }
 
-#container {
-  background: rgb(214, 212, 212);
+.father {
+  margin-top: 45px;
 
+  #container {
+    margin-top: 80px;
+    background: rgb(214, 212, 212);
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    border: 2px solid blue;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+
+    h2 {
+      margin-top: 40px;
+      font-size: 65px;
+      color: blue;
+      text-decoration: underline;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #main {
+      margin-top: 35px;
+      background-color: oldlace;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 20px;
+
+      //-----------------Contenedor principal-------------
+    }
+
+
+  }
 
 }
