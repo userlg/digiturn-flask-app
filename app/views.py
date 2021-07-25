@@ -3,7 +3,7 @@ from app import *
 
 @app.route('/')
 def home():
-    return '<h1> Welcome to the home </h1>'
+    return '<h1> Welcome to the digiturn app </h1>'
 
 
 @app.route('/about')
