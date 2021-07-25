@@ -14,9 +14,10 @@ body {
 }
 .father #container {
   margin-top: 80px;
-  background: #d6d4d4;
+  background: white;
   text-align: center;
   width: 80%;
+  box-shadow: 1px 2px 3px #858383;
   margin: auto;
   border: 2px solid blue;
   border-radius: 4px;
