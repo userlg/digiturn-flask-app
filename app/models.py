@@ -1,16 +1,19 @@
 from app import *
+from datetime import datetime
 
 class Vendedor(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(60))
   last_name = db.Column(db.String(60))
   status = db.Column(db.Boolean)
+  created = db.Column(db.DateTime)
   
-  def __init__(self,name,last_name,status) :
+  def __init__(self,name,last_name,status,) :
     super().__init__()
     self.name = name
     self.last_name = last_name
     self.status = status
+    self.created= datetime.now()
 
 class Cliente(db.Model):
   id = db.Column(db.Integer, primary_key=True)

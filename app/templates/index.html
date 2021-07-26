@@ -14,12 +14,20 @@
         </select>
 
       </div>
-
       <button id="preferencial" type="button">Preferencial</button>
 
 
     </div>
   </div>
 </div>
+<footer>
+  {% if valor %}
+  <div class="marquee">
+    {% for i in valor %}
+    <p> {{ i }}</p>
+    {%  endfor %}
+  </div>
+  {% endif %}
+</footer>
 
 {% endblock %}

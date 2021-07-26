@@ -1,3 +1,7 @@
+
+
+
+
 html,
 body {
   margin: 0;
@@ -48,4 +52,45 @@ body {
 
   }
 
+}
+
+//-----------------MARQUEE EFFECT --------------
+
+
+#footer {
+  margin-top: 100px;
+}
+
+.marquee {
+  margin-top:30px;
+  height: 40px;
+  color: white;
+  background: rgb(80, 107, 196);
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  //overflow: hidden;
+p  {
+    font-size: 22px;
+    //display: inline-block;
+    padding-left: 100%;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    margin-right:5px;
+    margin-left:5px;
+    vertical-align: middle;
+    -webkit-animation: scroll 25s infinite linear;
+    
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translate(0,0);
+  }
+
+  100% {
+    -webkit-transform: translate(-100%,0);
+  }
 }
