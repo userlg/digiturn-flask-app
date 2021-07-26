@@ -1,5 +1,16 @@
 {% extends "layout.html" %} {% block body%}
 
-<h2>Seller</h2>
+<h2>Añadir vendedor</h2>
 
+<div id="container">
+  <form action="/admin/add_seller" method="POST">
+    <label for="name">nombre</label>
+    <input type="text" id="name" required/>
+    <label for="last_name">apellido</label>
+    <input type="text"  id='last_name' required/>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<a href="/admin/dashboard">Admin View</a>
 {% endblock %}

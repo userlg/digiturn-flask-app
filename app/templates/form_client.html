@@ -1,16 +1,22 @@
 {% extends "layout.html" %} {% block body%}
-    
-<h2>client</h2>
 
+<h2>Añadir cliente</h2>
 
 <div id="container">
-   <form action="/admin/add_client" method="POST">
-     <label for="name">nombre</label>
-     <input type='text' id='name'>
-     <button type="submit">Enviar</button>
+  <form action="/admin/add_client" method="POST">
+    <label for="name">nombre</label>
+    <input type="text" id="name" required/>
+    <input type="text"  id='last_name' required/>
+    <input type="email" id='email' required/>
+    <label for="type_client">Tipo</label>
+    <select name="type" id="type_client">
+      <option value="regular">regular</option>
+      <option value="especial">especial</option>
+      <option value="preferencial">preferencial</option>
+    </select>
+    <button type="submit">Enviar</button>
   </form>
-
 </div>
-
+<a href="/admin/dashboard">Admin View</a>
 
 {% endblock %}

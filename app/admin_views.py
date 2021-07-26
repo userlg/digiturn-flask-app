@@ -23,3 +23,7 @@ def view_client():
 @app.route('/admin/add_client',methods=['POST'])
 def add_client():
     return 'Cliente Añadido'
+
+@app.route('/admin/add_seller',methods=['POST'])
+def add_seller():
+    return 'Vendedor Añadido'
