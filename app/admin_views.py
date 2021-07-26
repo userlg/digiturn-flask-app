@@ -12,10 +12,14 @@ def admin_dashboard():
 def admin_profile():
     return 'Admin profile'
 
-@app.route('/admin/add_seller')
-def add_seller():
+@app.route('/admin/view_seller')
+def view_seller():
     return render_template('form_seller.html')
 
-@app.route('/admin/add_client')
-def add_client():
+@app.route('/admin/view_client')
+def view_client():
     return render_template('form_client.html')
+
+@app.route('/admin/add_client',methods=['POST'])
+def add_client():
+    return 'Cliente Añadido'

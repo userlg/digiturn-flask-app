@@ -1,4 +1,16 @@
 {% extends "layout.html" %} {% block body%}
     
 <h2>client</h2>
+
+
+<div id="container">
+   <form action="/admin/add_client" method="POST">
+     <label for="name">nombre</label>
+     <input type='text' id='name'>
+     <button type="submit">Enviar</button>
+  </form>
+
+</div>
+
+
 {% endblock %}
