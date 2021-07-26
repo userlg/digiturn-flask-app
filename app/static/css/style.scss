@@ -106,6 +106,36 @@ body {
 
 //<------------------------------------------------>>
 
+
+//<--------------------------Father2------------------>
+
+
+#father2 {
+  width: 80%;
+  margin: auto;
+  background: orange;
+  #table {
+    #column_table {
+      margin-top: 20px;
+      display: flex;
+    flex-direction: row;
+    justify-content:center;
+      div {
+        display: block;
+        font-size: 22px;
+        width:25%;
+        text-align: center;
+        padding: 3px;
+        background-color:rgb(209, 209, 209);
+        border: 1px solid black;
+      }
+    }
+  }
+}
+
+//<-------------------------------------------------->
+
+
 //-----------------MARQUEE EFFECT --------------
 
 
