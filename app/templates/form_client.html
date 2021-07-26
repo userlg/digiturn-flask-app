@@ -5,9 +5,9 @@
 <div id="container">
   <form action="/admin/add_client" method="POST">
     <label for="name">nombre</label>
-    <input type="text" id="name" required/>
-    <input type="text"  id='last_name' required/>
-    <input type="email" id='email' required/>
+    <input type="text" id="name" name="name"  required/>
+    <input type="text"  id='last_name' name='last_name'  required/>
+    <input type="email" id='email' name="email" required/>
     <label for="type_client">Tipo</label>
     <select name="type" id="type_client">
       <option value="regular">regular</option>

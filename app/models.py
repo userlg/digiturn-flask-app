@@ -25,6 +25,14 @@ class Cliente(db.Model):
     self.last_name = last_name
     self.email = email
     self.cliente_type = cliente_type
+    
+
+class Turns(db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  id_vendedor = db.Column(db.String(60))
+  last_name = db.Column(db.String(60))
+  email = db.Column(db.String(70), unique=True)
+ #Regular o 
   
   #task = Task.query.filter_by(id=int(id)).first()
 

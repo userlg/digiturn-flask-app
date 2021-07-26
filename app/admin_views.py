@@ -22,8 +22,22 @@ def view_client():
 
 @app.route('/admin/add_client',methods=['POST'])
 def add_client():
-    return 'Cliente Añadido'
+    name = request.form['name']
+    last_name = request.form['last_name']
+    email = request.form['email']
+    type_client = request.form['type']
+    if name and last_name and email and type_client:
+       new_client = Cliente(name, last_name, email, type_client)
+       db.session.add(new_client)
+       db.session.commit()
+       return redirect(url_for('admin_dashboard'))
 
 @app.route('/admin/add_seller',methods=['POST'])
 def add_seller():
-    return 'Vendedor Añadido'
+     name = request.form['name']
+     last_name = request.form['last_name']
+     if name and last_name:
+       new_seller = Vendedor(name, last_name,True)
+       db.session.add(new_seller)
+       db.session.commit()
+     return redirect(url_for('admin_dashboard'))
