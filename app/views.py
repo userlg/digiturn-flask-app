@@ -9,5 +9,7 @@ def home():
 
 @app.route('/sellers_view',methods=['GET'])
 def sellers_view():
-    return render_template('sellers_view.html')
+    
+    sellers = Vendedor.query.all();
+    return render_template('sellers_view.html',sellers=sellers)
 

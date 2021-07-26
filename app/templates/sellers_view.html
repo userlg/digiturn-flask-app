@@ -23,6 +23,17 @@
       <div>vendedor</div>
       <div>estado</div>
     </div>
+      <div id="data_seller">
+        {% if sellers %}
+        {% for seller in sellers %}
+        <div id='details'>
+        <div class="{% if  seller.id  % 2  %} pair-style {% endif %}"> {{ seller.name }}</div>
+        <div>{{ seller.last_name }}</div>
+        <div>Activo</div>
+        </div>
+        {%  endfor %}
+        {%  endif %}
+      </div>
   </div>
 </div>
 

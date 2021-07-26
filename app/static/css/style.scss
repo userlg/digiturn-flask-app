@@ -113,27 +113,51 @@ body {
 #father2 {
   width: 80%;
   margin: auto;
-  background: orange;
+
   #table {
     #column_table {
       margin-top: 20px;
       display: flex;
-    flex-direction: row;
-    justify-content:center;
+      flex-direction: row;
+      justify-content: center;
+
       div {
         display: block;
         font-size: 22px;
-        width:25%;
+        width: 26%;
         text-align: center;
         padding: 3px;
-        background-color:rgb(209, 209, 209);
+        background-color: rgb(209, 209, 209);
         border: 1px solid black;
       }
+    }
+
+    #data_seller {
+
+      #details {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        div {
+          font-size: 22px;
+          width: 26%;
+          text-align: center;
+          padding: 3px;
+          background-color: rgb(252, 251, 251);
+          border: 1px solid black;
+        }
+      }
+
     }
   }
 }
 
 //<-------------------------------------------------->
+
+.pair-style {
+  background:rgb(133, 131, 131);
+}
 
 
 //-----------------MARQUEE EFFECT --------------
