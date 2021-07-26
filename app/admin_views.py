@@ -15,3 +15,7 @@ def admin_profile():
 @app.route('/admin/add_seller')
 def add_seller():
     return render_template('form_seller.html')
+
+@app.route('/admin/add_client')
+def add_client():
+    return render_template('form_client.html')
