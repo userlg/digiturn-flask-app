@@ -1,6 +1,7 @@
 from app import *
 from .models import Cliente
 from .models import Vendedor
+import datetime
 
 @app.route('/',methods=['GET'])
 def home():
@@ -13,4 +14,10 @@ def sellers_view():
     
     sellers = Vendedor.query.all();
     return render_template('sellers_view.html',sellers=sellers)
+
+@app.route('/process', methods=['GET'])
+def process():
+    msg = 'Proceso ejecutado'
+    print(datetime.datetime.now())
+    return render_template('index.html',msg=msg)
 

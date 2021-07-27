@@ -39,7 +39,9 @@
   </div>
 </div>
 
-
+{% if msg %}
+<p>{{ msg }}</p>
+{%  endif %}
 <footer>
   {% if valor %}
   <div class="marquee">
