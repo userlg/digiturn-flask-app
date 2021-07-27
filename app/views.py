@@ -5,7 +5,8 @@ from .models import Vendedor
 @app.route('/',methods=['GET'])
 def home():
     valor=[1,2,3,4]
-    return render_template('index.html',valor=valor)
+    sellers = Vendedor.query.all()
+    return render_template('index.html',valor=valor, sellers=sellers)
 
 @app.route('/sellers_view',methods=['GET'])
 def sellers_view():

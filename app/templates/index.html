@@ -12,11 +12,7 @@
       <button id="normal" type="button">Normal</button>
       <div id="especial">
         <button type="button" id="Especial">Especial</button>
-        <select name="vendedor" id="Vendedor" style="display: none">
-          <option>Arturo</option>
-          <option>Carlos</option>
-          <option>Diego</option>
-        </select>
+        
       </div>
       <button id="preferencial" type="button">Preferencial</button>
     </div>
@@ -25,8 +21,20 @@
 
 
 <div id="container_modal" class='animate__animated animate__fadeInDown animate_slow'>
-  <div id="modal">
-    <h1>Cliente Normal </h1>
+  <div id="modal" >
+    <h1 id='subtitle'>Cliente Normal </h1>
+    <h3 id='message'>Seleccione un vendedor</h3>
+    <div id="input_container"> 
+    <label for="ticket">Codigo</label>
+    <input id='ticket'type="text" name="ticket">
+    </div>
+    {% if sellers   %}
+    <select name="vendedor" id="Vendedor" required>
+      {% for seller in sellers %}
+      <option>{{ seller.name }}  {{ seller.last_name }} </option>
+      {% endfor %}
+    </select>
+    {% endif %}
     <button id="btnTicket">Ticket</button>
   </div>
 </div>

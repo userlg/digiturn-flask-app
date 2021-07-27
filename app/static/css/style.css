@@ -9,6 +9,12 @@ body {
   background-attachment: fixed;
 }
 
+.especial {
+  width: 35%;
+  height: 280px;
+  background: yellow;
+}
+
 .father {
   margin-top: 45px;
 }
@@ -158,6 +164,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  vertical-align: middle;
   position: fixed;
   top: 0;
   left: 0;
@@ -169,7 +177,7 @@ body {
   margin: auto;
   background: white;
   width: 26%;
-  height: 20%;
+  height: 25%;
   padding: 7px;
   box-shadow: 2px 3px 2px gray;
   border-radius: 5px;
@@ -180,6 +188,51 @@ body {
 }
 #container_modal #modal h1 {
   color: blue;
+  text-align: center;
+}
+#container_modal #modal h3,
+#container_modal #modal select {
+  display: none;
+}
+#container_modal #modal h3 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#container_modal #modal #input_container {
+  display: none;
+  margin-top: 12px;
+  margin-bottom: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 35px;
+}
+#container_modal #modal #input_container label {
+  margin-right: 3px;
+  font-size: 22px;
+}
+#container_modal #modal #input_container input {
+  font-size: 25px;
+  height: 30px;
+}
+#container_modal #modal select {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 240px;
+  border: 1px solid black;
+  background: #92baed;
+  border-radius: 5px;
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   text-align: center;
 }
 #container_modal #modal button {
@@ -194,8 +247,9 @@ body {
   padding: 3px;
   margin: auto;
   display: block;
-  width: 100px;
+  width: 90px;
   height: 50px;
+  margin-top: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
