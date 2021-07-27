@@ -1,31 +1,43 @@
 {% extends "layout.html" %} {% block body%}
 
 <div class="father">
-  <div id="container" class="animate__animated animate__bounceInDown animate__delay-1s animate__slow">
+  <div
+    id="container"
+    class="
+      animate__animated animate__bounceInDown animate__delay-1s animate__slow
+    "
+  >
     <h2>Principal View</h2>
     <div id="main">
       <button id="normal" type="button">Normal</button>
       <div id="especial">
         <button type="button" id="Especial">Especial</button>
-        <select name="vendedor" id="Vendedor" style="display:none;">
+        <select name="vendedor" id="Vendedor" style="display: none">
           <option>Arturo</option>
           <option>Carlos</option>
           <option>Diego</option>
         </select>
-
       </div>
       <button id="preferencial" type="button">Preferencial</button>
-
-
     </div>
   </div>
 </div>
+
+
+<div id="container_modal" class='animate__animated animate__fadeInDown animate_slow'>
+  <div id="modal">
+    <h1>Cliente Normal </h1>
+    <button id="btnTicket">Ticket</button>
+  </div>
+</div>
+
+
 <footer>
   {% if valor %}
   <div class="marquee">
     {% for i in valor %}
-    <p> {{ i }}</p>
-    {%  endfor %}
+    <p>{{ i }}</p>
+    {% endfor %}
   </div>
   {% endif %}
 </footer>
