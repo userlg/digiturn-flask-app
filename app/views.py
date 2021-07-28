@@ -17,7 +17,15 @@ def sellers_view():
 
 @app.route('/process', methods=['GET'])
 def process():
-    msg = 'Proceso ejecutado'
+    sellers = {}
+    index = 1
+    result = Vendedor.query.all()
+    for seller in result:
+        sellers[index] = seller.name
+        index += 1
     print(datetime.datetime.now())
-    return render_template('index.html',msg=msg)
+    if sellers:
+      return jsonify(sellers)
+    msg = {'msg':'No hay vendedores registrados en el sistema'}
+    return jsonify(msg)
 

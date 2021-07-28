@@ -15,7 +15,6 @@ $(document).ready(function() {
         console.log('Error')
       }
       else {
-       var password = document.getElementById('#passwordInput')
         console.log('Data upload')
         console.log(data)
       }
