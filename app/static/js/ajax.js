@@ -6,7 +6,7 @@ $(document).ready(function () {
       async: true,
       url: '/process',
       type: 'GET',
-      dataType: 'text',
+      dataType: 'json',
       success: function (data) {
         console.log('Working');
         console.log(data)
@@ -19,6 +19,6 @@ $(document).ready(function () {
     
   }
 
-  setInterval(getAJAX, 3000);
+  setInterval(getAJAX, 8000);
  
 });

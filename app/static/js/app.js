@@ -31,7 +31,7 @@ btnEspecial.addEventListener('click', (e) => {
   title.innerHTML = 'Cliente Especial';
   modal.style.display = 'flex';
 
-  modal2.style.height='32%';
+  modal2.style.height = '32%';
 
   let message = document.getElementById('message');
   message.style.display = 'block';
@@ -41,7 +41,7 @@ btnEspecial.addEventListener('click', (e) => {
   select.style.display = 'block';
 });
 
-btnPreferencial.addEventListener('click',(e) => {
+btnPreferencial.addEventListener('click', (e) => {
   const modal = document.getElementById('container_modal');
   console.log('Abriendo Modal : Cliente Preferencial');
   let title = document.querySelector('#subtitle');
@@ -54,7 +54,26 @@ btnPreferencial.addEventListener('click',(e) => {
   const inputPreferencial = document.getElementById('input_container');
   inputPreferencial.style.display = 'block';
   const modal2 = document.getElementById('modal');
-  modal2.style.height='34%';
+  modal2.style.height = '34%';
+
+  while (true) {
+    setTimeout(() => {
+      console.log('dentro del setTimeout')
+      const inputTicket = document.getElementById('ticket').value;
+      let valor = inputTicket;
+      if (valor == 0) {
+        btnTicketModal.style.display = 'none';
+        console.log(valor);
+      }
+      else {
+        btnTicketModal.style.display = 'block';
+        return 'btn unblock';
+      }
+
+    }, 1400);
+  }
+
+
 
   e.preventDefault();
 })
@@ -67,11 +86,11 @@ btnTicketModal.addEventListener('click', (e) => {
   console.log('Espero 3 segundos')
   setTimeout(() => {
     modal.style.display = 'none';
-    modal2.style.height='25%';
+    modal2.style.height = '25%';
   }, 2000)
   const modal2 = document.getElementById('modal');
-  
-  modal2.style.height='25%';
+
+  modal2.style.height = '25%';
   btnTicketModal.style.display = 'none';
   message.style.display = 'none';
   select.style.display = 'none';
@@ -79,6 +98,10 @@ btnTicketModal.addEventListener('click', (e) => {
   const inputPreferencial = document.getElementById('input_container');
   inputPreferencial.style.display = 'none';
 
-  e.preventDefault();
+  //e.preventDefault();
 
-})
+});
+
+
+
+

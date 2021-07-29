@@ -2,6 +2,7 @@ from app import *
 from .models import Cliente
 from .models import Vendedor
 import datetime
+import json
 
 @app.route('/',methods=['GET'])
 def home():
@@ -17,15 +18,23 @@ def sellers_view():
 
 @app.route('/process', methods=['GET'])
 def process():
-    sellers = {}
-    index = 1
+    
     result = Vendedor.query.all()
+    lista = []
+
     for seller in result:
-        sellers[index] = seller.name
-        index += 1
+        data = {
+            'name':seller.name,'last_name':seller.last_name,'status':seller.status
+            }
+        lista.append(data)
+    print(lista)
+       
+    sellers = {'vendedores':lista}  
+       
     print(datetime.datetime.now())
     if sellers:
-      return jsonify(sellers)
+      response = json.dumps(sellers,indent=4)
+      return jsonify(response)
     msg = {'msg':'No hay vendedores registrados en el sistema'}
     return jsonify(msg)
 
