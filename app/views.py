@@ -1,3 +1,4 @@
+from os import name
 from app import *
 from .models import Cliente
 from .models import Vendedor
@@ -23,11 +24,11 @@ def process():
     lista = []
 
     for seller in result:
-        data = {
+        data = {'id':seller.id,
             'name':seller.name,'last_name':seller.last_name,'status':seller.status
             }
         lista.append(data)
-    print(lista)
+    #print(lista)
        
     sellers = {'vendedores':lista}  
        
@@ -36,5 +37,6 @@ def process():
       response = json.dumps(sellers,indent=4)
       return jsonify(response)
     msg = {'msg':'No hay vendedores registrados en el sistema'}
-    return jsonify(msg)
+    response = msg
+    return jsonify(response,charset='utf-8')
 

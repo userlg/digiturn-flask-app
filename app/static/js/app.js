@@ -7,6 +7,8 @@ const btnPreferencial = document.getElementById('preferencial');
 
 const btnTicketModal = document.getElementById('btnTicket')
 
+const marquee = document.getElementById('marquee_text');
+
 btnNormal.addEventListener('click', (e) => {
   const modal = document.getElementById('container_modal');
   console.log('Abriendo Modal : Cliente Normal');
@@ -56,8 +58,7 @@ btnPreferencial.addEventListener('click', (e) => {
   const modal2 = document.getElementById('modal');
   modal2.style.height = '34%';
 
-  while (true) {
-    setTimeout(() => {
+    setInterval(() => {
       console.log('dentro del setTimeout')
       const inputTicket = document.getElementById('ticket').value;
       let valor = inputTicket;
@@ -71,7 +72,6 @@ btnPreferencial.addEventListener('click', (e) => {
       }
 
     }, 1400);
-  }
 
 
 
