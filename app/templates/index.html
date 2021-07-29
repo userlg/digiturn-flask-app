@@ -42,12 +42,12 @@
 {% if msg %}
 <p>{{ msg }}</p>
 {%  endif %}
-<footer>
-  {% if valor %}
-  <div class="marquee">
-    {% for i in valor %}
-    <p id="marquee_text">{{ i }}</p>
-    {% endfor %}
+<footer  id="marquee_text">
+  {% if quantify %}
+  <div class="marquee"   >
+    <span style="display:none" id="quantify">{{ quantify }}</span>
+    <p id="p_text">{{ quantify }}</p>
+
   </div>
   {% endif %}
 </footer>

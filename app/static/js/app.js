@@ -19,7 +19,7 @@ btnNormal.addEventListener('click', (e) => {
   message.innerHTML = ' Presione Ticket para solicitar turno';
   modal.style.display = 'flex';
   btnTicketModal.style.display = 'block';
-
+  marquee.style.display = 'none';
   e.preventDefault();
 });
 
@@ -28,7 +28,7 @@ btnEspecial.addEventListener('click', (e) => {
   const modal2 = document.getElementById('modal');
   console.log('Abriendo Modal : Cliente Especial');
   btnTicketModal.style.display = 'block';
-
+  marquee.style.display = 'none';
   let title = document.querySelector('#subtitle');
   title.innerHTML = 'Cliente Especial';
   modal.style.display = 'flex';
@@ -45,35 +45,48 @@ btnEspecial.addEventListener('click', (e) => {
 
 btnPreferencial.addEventListener('click', (e) => {
   const modal = document.getElementById('container_modal');
-  console.log('Abriendo Modal : Cliente Preferencial');
+  const inputTicket = document.getElementById('ticket');
+  const inputPreferencial = document.getElementById('input_container');
+  const modal2 = document.getElementById('modal');
+  const select = document.getElementById('Vendedor');
   let title = document.querySelector('#subtitle');
-  title.innerHTML = 'Cliente Preferencial';
   let message = document.getElementById('message');
+  let inputValue = inputTicket.value;
+
+
+  if (inputValue.length > 0) {
+    inputTicket.value = '';
+  }
+
+  title.innerHTML = 'Cliente Preferencial';
+  console.log('Abriendo Modal : Cliente Preferencial');
   message.style.display = 'block';
-  message.innerHTML = ' Introduzca su codigo y presione ticket para solicitar turno';
+  message.innerHTML = ' Introduzca su codigo y seleccione vendedor';
   modal.style.display = 'flex';
   btnTicketModal.style.display = 'block';
-  const inputPreferencial = document.getElementById('input_container');
   inputPreferencial.style.display = 'block';
-  const modal2 = document.getElementById('modal');
-  modal2.style.height = '34%';
+  modal2.style.height = '42%';
+  marquee.style.display = 'none';
+  select.style.display='block';
 
-    setInterval(() => {
-      console.log('dentro del setTimeout')
-      const inputTicket = document.getElementById('ticket').value;
-      let valor = inputTicket;
-      if (valor == 0) {
+  var input_verify = setInterval(() => {
+    const inputTicket = document.getElementById('ticket').value;
+    let valor = inputTicket;
+    if (valor == 0) {
+      btnTicketModal.style.display = 'none';
+      console.log(valor);
+    }
+    else {
+      btnTicketModal.style.display = 'block';
+      btnTicketModal.addEventListener('click', () => {
+        console.log('presionado');
         btnTicketModal.style.display = 'none';
-        console.log(valor);
-      }
-      else {
-        btnTicketModal.style.display = 'block';
-        return 'btn unblock';
-      }
+        clearInterval(input_verify);
+      });
+    }
+  }, 300);
 
-    }, 1400);
-
-
+  btnTicketModal.style.display = 'none';
 
   e.preventDefault();
 })
@@ -83,10 +96,13 @@ btnTicketModal.addEventListener('click', (e) => {
   const modal = document.getElementById('container_modal');
   let message = document.getElementById('message');
   let select = document.getElementById('Vendedor');
+  btnTicketModal.style.display = 'none';
   console.log('Espero 3 segundos')
   setTimeout(() => {
     modal.style.display = 'none';
     modal2.style.height = '25%';
+    marquee.style.display = 'inline';
+    btnTicketModal.style.display = 'none';
   }, 2000)
   const modal2 = document.getElementById('modal');
 
@@ -101,6 +117,14 @@ btnTicketModal.addEventListener('click', (e) => {
   //e.preventDefault();
 
 });
+
+setInterval(() => {
+  var valor = document.getElementById('p_text').value
+  const pText = document.getElementById('p_text');
+  var array = [];
+  array.push(valor);
+  pText.style.display = 'none';
+}, 15000);
 
 
 

@@ -33,8 +33,17 @@ class Cliente(db.Model):
 class Turns(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   id_vendedor = db.Column(db.String(60))
-  last_name = db.Column(db.String(60))
-  email = db.Column(db.String(70), unique=True)
+  seller_name = db.Column(db.String(60))
+  seller_last_name = db.Column(db.String(60))
+  status = db.Column(db.Boolean)
+  
+  def __init__(self,seller_name,seller_last_name,id_vendedor,status) :
+    super().__init__()
+    self.id_vendedor = id_vendedor
+    self.seller_last_name = seller_last_name
+    self.seller_name = seller_name
+    self.status = status
+  
  #Regular o 
   
   #task = Task.query.filter_by(id=int(id)).first()

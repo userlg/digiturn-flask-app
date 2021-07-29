@@ -2,14 +2,15 @@ from os import name
 from app import *
 from .models import Cliente
 from .models import Vendedor
+from .models import Turns
 import datetime
 import json
 
 @app.route('/',methods=['GET'])
 def home():
-    valor=[1,2,3,4]
     sellers = Vendedor.query.all()
-    return render_template('index.html',valor=valor, sellers=sellers)
+    quantify = Vendedor.query.count()
+    return render_template('index.html',quantify=quantify, sellers=sellers)
 
 @app.route('/sellers_view',methods=['GET'])
 def sellers_view():
