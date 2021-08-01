@@ -1,3 +1,6 @@
+import { get_ticket } from "./get_ticket.js";
+
+const subtitle = document.getElementById('subtitle');
 
 const btnNormal = document.getElementById('normal');
 
@@ -15,6 +18,7 @@ btnNormal.addEventListener('click', (e) => {
   let title = document.querySelector('#subtitle');
   title.innerHTML = 'Cliente Normal';
   let message = document.getElementById('message');
+  subtitle.style.display = 'block';
   message.style.display = 'block';
   message.innerHTML = ' Presione Ticket para solicitar turno';
   modal.style.display = 'flex';
@@ -26,6 +30,7 @@ btnNormal.addEventListener('click', (e) => {
 btnEspecial.addEventListener('click', (e) => {
   const modal = document.getElementById('container_modal');
   const modal2 = document.getElementById('modal');
+  subtitle.style.display = 'block';
   console.log('Abriendo Modal : Cliente Especial');
   btnTicketModal.style.display = 'block';
   marquee.style.display = 'none';
@@ -58,6 +63,7 @@ btnPreferencial.addEventListener('click', (e) => {
     inputTicket.value = '';
   }
 
+  subtitle.style.display = 'block';
   title.innerHTML = 'Cliente Preferencial';
   console.log('Abriendo Modal : Cliente Preferencial');
   message.style.display = 'block';
@@ -67,7 +73,7 @@ btnPreferencial.addEventListener('click', (e) => {
   inputPreferencial.style.display = 'block';
   modal2.style.height = '42%';
   marquee.style.display = 'none';
-  select.style.display='block';
+  select.style.display = 'block';
 
   var input_verify = setInterval(() => {
     const inputTicket = document.getElementById('ticket').value;
@@ -94,17 +100,23 @@ btnPreferencial.addEventListener('click', (e) => {
 
 btnTicketModal.addEventListener('click', (e) => {
   const modal = document.getElementById('container_modal');
+  const modal2 = document.getElementById('modal');
   let message = document.getElementById('message');
   let select = document.getElementById('Vendedor');
+  let timer = document.getElementById('timer');
+  
+  subtitle.style.display = 'none';
+
   btnTicketModal.style.display = 'none';
   console.log('Espero 3 segundos')
-  setTimeout(() => {
-    modal.style.display = 'none';
-    modal2.style.height = '25%';
-    marquee.style.display = 'inline';
-    btnTicketModal.style.display = 'none';
-  }, 2000)
-  const modal2 = document.getElementById('modal');
+  
+
+  modal.style.display = 'none';
+  modal2.style.height = '25%';
+  marquee.style.display = 'inline';
+
+  get_ticket();
+  
 
   modal2.style.height = '25%';
   btnTicketModal.style.display = 'none';

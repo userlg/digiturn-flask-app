@@ -18,16 +18,25 @@
     </div>
   </div>
 </div>
+<!----------------Ticket---------------------------->
+<div id="container_ticket_modal">
+<div id="ticket_modal" >
+   <h1 id="number_ticket"></h1>
+   <h3 id='type_client'></h3>
+</div>
+</div>
 
 
+<!-------------------  Modal------------------------>
 <div id="container_modal" class='animate__animated animate__fadeInDown animate_slow'>
   <div id="modal" >
-    <h1 id='subtitle'>Cliente Normal </h1>
+    <h1 id='subtitle'></h1>
     <h3 id='message'>Seleccione un vendedor</h3>
     <div id="input_container"> 
     <label for="ticket">Codigo</label>
     <input id='ticket'type="text" name="ticket" required>
     </div>
+    <p id="timer"></p>
     {% if sellers   %}
     <select name="vendedor" id="Vendedor" required>
       {% for seller in sellers %}

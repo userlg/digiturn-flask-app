@@ -41,3 +41,8 @@ def process():
     response = msg
     return jsonify(response,charset='utf-8')
 
+#This method generate the ticket
+@app.route('/get_ticket',methods=['GET'])
+def get_ticket():
+    return jsonify({'message': 'generated'})
+

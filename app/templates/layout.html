@@ -26,8 +26,9 @@
   <body>
     {% block body %} {% endblock %}
 
-    <script src=" {{ url_for('static',filename='js/app.js') }}"></script>
+    <script src=" {{ url_for('static',filename='js/app.js') }}"  type='module'></script>
     <script src=" {{ url_for('static',filename='js/ajax.js') }}"  type='module' charset="utf-8"></script>
     <script src=" {{ url_for('static',filename='js/client_response.js') }}"  type='module' charset="utf-8"></script>
+    <script src=" {{ url_for('static',filename='js/get_ticket.js') }}" type='module' charset="utf-8"></script>
   </body>
 </html>
