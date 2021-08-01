@@ -1,11 +1,11 @@
 
-const btnNormal = document.getElementById('normal')
+const btnNormal = document.getElementById('normal');
 
-const btnEspecial = document.getElementById('especial')
+const btnEspecial = document.getElementById('especial');
 
 const btnPreferencial = document.getElementById('preferencial');
 
-const btnTicketModal = document.getElementById('btnTicket')
+const btnTicketModal = document.getElementById('btnTicket');
 
 const marquee = document.getElementById('marquee_text');
 

@@ -14,7 +14,6 @@ $(document).ready(function () {
         //console.log('Working AJAX');
         get_data(data);
       },
-
       error: function () {
         console.log('Error detected');
       }
