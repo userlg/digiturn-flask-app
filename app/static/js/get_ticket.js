@@ -1,10 +1,25 @@
+function resolveAfterNSeconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 1000);
+  });
+}
 
+async function generate_time(seg){
+  let i = seg;
+  let text = document.getElementById('timer');
+  text.style.display='block';
+  while(i){
+   
+    console.log('seconds: ',i);
+    text.innerHTML=i;
+    let result = await resolveAfterNSeconds();
+    i--;
 
-function get_ticket(){
-  console.log('generate ticket');
+  }
+  text.style.display='none';
 }
 
 
-
-
-export {get_ticket};
+export {generate_time};

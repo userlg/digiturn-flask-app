@@ -1,4 +1,4 @@
-import { get_ticket } from "./get_ticket.js";
+import { generate_time } from "./get_ticket.js";
 
 const subtitle = document.getElementById('subtitle');
 
@@ -85,7 +85,7 @@ btnPreferencial.addEventListener('click', (e) => {
     else {
       btnTicketModal.style.display = 'block';
       btnTicketModal.addEventListener('click', () => {
-        console.log('presionado');
+        //console.log('presionado');
         btnTicketModal.style.display = 'none';
         clearInterval(input_verify);
       });
@@ -109,13 +109,15 @@ btnTicketModal.addEventListener('click', (e) => {
 
   btnTicketModal.style.display = 'none';
   console.log('Espero 3 segundos')
-  
 
-  modal.style.display = 'none';
+  timers();
+   
+
+  //modal.style.display = 'none';
   modal2.style.height = '25%';
   marquee.style.display = 'inline';
 
-  get_ticket();
+ 
   
 
   modal2.style.height = '25%';
@@ -140,4 +142,11 @@ setInterval(() => {
 
 
 
+//------------------functions ---------------------
 
+async function timers(){
+   await generate_time(3);
+   let modal = document.getElementById('container_modal');
+   modal.style.display = 'none';
+
+}
