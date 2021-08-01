@@ -1,5 +1,6 @@
 html,
 body {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
   margin: 0;
   padding: 0;
   background: white;
@@ -7,6 +8,82 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  font-family: "Roboto Slab", serif;
+  box-sizing: border-box;
+}
+html #loading_container,
+body #loading_container {
+  background-color: rgba(250, 240, 245, 0.9);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+html #loading_container #loading,
+body #loading_container #loading {
+  border: 15px solid #ccc;
+  border-top-color: #3e6e8f;
+  border-top-style: double;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 1.7s infinite linear;
+  -webkit-animation: animate 1.7s infinite linear;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+  90% {
+    transform: rotate(300deg);
+    -webkit-transform: rotate(300deg);
+    -moz-transform: rotate(300deg);
+    -ms-transform: rotate(300deg);
+    -o-transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
 }
 
 .especial {
@@ -223,10 +300,15 @@ body {
 }
 #container_modal #modal #timer {
   display: none;
-  font-size: 25px;
-  color: #0b6625;
+  font-size: 55px;
+  font-weight: bolder;
+  color: #12331b;
   line-height: 25px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 85px;
+  text-shadow: 1px 2px gray;
 }
 #container_modal #modal select {
   margin-left: auto;

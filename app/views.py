@@ -1,3 +1,4 @@
+from operator import ge
 from os import name
 from app import *
 from .models import Cliente
@@ -5,6 +6,7 @@ from .models import Vendedor
 from .models import Turns
 import datetime
 import json
+import random
 
 @app.route('/',methods=['GET'])
 def home():
@@ -44,5 +46,22 @@ def process():
 #This method generate the ticket
 @app.route('/get_ticket',methods=['GET'])
 def get_ticket():
-    return jsonify({'message': 'generated'})
-
+    
+    result = Vendedor.query.all()
+    list = []
+    cont = 0
+    for seller in result:
+       if seller.status == True:
+           cont += 1
+           list.append(seller.id)
+           
+    if cont > 0: 
+        generated_seller = random.randint(0,cont-1)
+        id =  list[generated_seller]
+        print('Seller Status Changed: ' + str(id))
+        result = Vendedor.query.filter_by(id = (id)).first()
+        result.status = False
+        db.session.add(result)
+        db.session.commit()
+        return jsonify({'message': 'generated','seller':list[generated_seller],' count':cont,'status':200})
+    return jsonify({'message':'No hay vendedores Disponibles','status':400})
