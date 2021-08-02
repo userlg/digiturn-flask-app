@@ -1,8 +1,9 @@
 {% extends "layout.html" %} {% block body%}
 
-<h2>Añadir vendedor</h2>
 
-<div id="container">
+
+<div id="admin"  class="animate__animated animate__flipInX animate__delay-1s">
+  <h2>Añadir vendedor</h2>
   <form action="/admin/add_seller" method="POST">
     <label for="name">nombre</label>
     <input type="text" id="name" name="name" required/>
@@ -10,7 +11,8 @@
     <input type="text"  id='last_name' name='last_name' required/>
     <button type="submit">Enviar</button>
   </form>
+  <a href="/admin/dashboard" id="dash_admin">Admin View</a>
 </div>
 
-<a href="/admin/dashboard">Admin View</a>
+
 {% endblock %}

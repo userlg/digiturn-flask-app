@@ -11,6 +11,186 @@ body {
   font-family: "Roboto Slab", serif;
   box-sizing: border-box;
 }
+html #admin,
+body #admin {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15px;
+  margin: auto;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 2px 3px 4px #969696;
+  padding: 15px;
+}
+html #admin h2,
+body #admin h2 {
+  text-align: center;
+  color: black;
+}
+html #admin #seller1,
+body #admin #seller1 {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+html #admin #seller1 a,
+body #admin #seller1 a {
+  border-radius: 3px;
+  background: #3487d5;
+  width: 100%;
+  padding: 4px;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+html #admin #seller1 a:hover,
+body #admin #seller1 a:hover {
+  animation: effect1 2s infinite linear;
+  -webkit-animation: effect1 2s infinite linear;
+}
+html #admin #client1,
+body #admin #client1 {
+  border-radius: 3px;
+  width: 30%;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  gap: 8px;
+}
+html #admin #client1 a,
+body #admin #client1 a {
+  border-radius: 3px;
+  background: #42b542;
+  width: 100%;
+  padding: 4px;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+html #admin #client1 a:hover,
+body #admin #client1 a:hover {
+  animation: effect1 2s infinite linear;
+  -webkit-animation: effect1 2s infinite linear;
+}
+html #admin #ticket_view,
+body #admin #ticket_view {
+  border-radius: 3px;
+  width: 30%;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  gap: 8px;
+}
+html #admin #ticket_view a,
+body #admin #ticket_view a {
+  border-radius: 3px;
+  background: #dc7530;
+  width: 100%;
+  padding: 4px;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+html #admin #ticket_view a:hover,
+body #admin #ticket_view a:hover {
+  animation: effect1 2s infinite linear;
+  -webkit-animation: effect1 2s infinite linear;
+}
+html #admin form,
+body #admin form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+html #admin form label,
+body #admin form label {
+  color: black;
+}
+html #admin form input,
+body #admin form input {
+  width: 50%;
+  height: 32px;
+}
+html #admin form input:hover,
+body #admin form input:hover {
+  border: 3px solid #3487d5;
+}
+html #admin form button,
+body #admin form button {
+  margin-top: 12px;
+  background-color: #3487d5;
+  width: 50%;
+  height: 13%;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: white;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  box-shadow: 2px 3px 4px #969696;
+  font-size: 20px;
+}
+html #admin form button:hover,
+body #admin form button:hover {
+  cursor: pointer;
+}
+html #dash_admin,
+body #dash_admin {
+  width: 30%;
+  padding: 15px;
+  border-radius: 3px;
+  color: white;
+  background-color: #42b542;
+  text-align: center;
+  margin: auto;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+html #dash_admin:hover,
+body #dash_admin:hover {
+  animation: effect1 2s infinite linear;
+  -webkit-animation: effect1 2s infinite linear;
+}
 html #loading_container,
 body #loading_container {
   background-color: rgba(250, 240, 245, 0.9);
@@ -83,6 +263,20 @@ body #loading_container #loading {
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
+  }
+}
+@keyframes effect1 {
+  0% {
+    color: white;
+  }
+  50% {
+    color: orange;
+  }
+  75% {
+    color: #ca98e2;
+  }
+  100% {
+    color: white;
   }
 }
 
